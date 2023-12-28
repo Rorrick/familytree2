@@ -1,0 +1,65 @@
+<br>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-container">
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Create Tree
+    Member</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <h6>Complete User Details</h6>
+        <section>
+          <div class="form-box">
+            <div class="form-value">
+              <form action="">
+                <div class="inputbox">
+                  <input [(ngModel)]="userFirstNameText" name="name" type="text" required>
+                  <label for=""> Name</label>
+                </div>
+                <div class="inputbox">
+                  <input [(ngModel)]="userLastNameText" name="last" type="text" required>
+                  <label for=""> Surname</label>
+                </div>
+                <div class="inputbox">
+                  <input [(ngModel)]="userGenderText" name ='gender' type="text" required>
+                  <label for=""> Gender</label>
+                </div>
+                <div class="inputbox">
+                  <input [(ngModel)]="userDateOfBirthText" name ='dob' type="text" required>
+                  <label for=""> Date Of Birth</label>
+                </div>
+                <div class="inputbox">
+                  <input [(ngModel)]="userDeathDate" name ='deathdate' type="text" required>
+                  <label for=""> Death Date</label>
+                </div>
+              </form>
+              <button (click)="createUser()">Create</button>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="userCard">
+  <!-- <p *ngIf="transferText !==''">{{transferText}}</p> -->
+  <!-- <p *ngIf="transferTextLastName !==''">{{transferTextLastName}}</p>
+  <p *ngIf="transferTextGender !==''">{{transferTextGender}}</p>
+  <p *ngIf="transferTextDateOfBirth !==''">{{transferTextDateOfBirth}}</p>
+  <p *ngIf="transferTextDeathDate !==''">{{transferTextDeathDate}}</p> -->
+  <ul>
+    <li *ngIf="transferText !==''">{{transferText}} </li>
+    <li *ngIf="transferTextLastName !==''">{{transferTextLastName}} </li>
+    <li *ngIf="transferTextGender !==''">{{transferTextGender}} </li>
+    <li *ngIf="transferTextDateOfBirth !==''">{{transferTextDateOfBirth}} </li>
+    <li *ngIf="transferTextDeathDate !==''">{{transferTextDeathDate}} </li>
+  </ul>
+</div>
+
